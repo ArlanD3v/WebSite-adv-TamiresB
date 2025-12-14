@@ -35,7 +35,6 @@
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts",
     "**/*.mts",
-    "src/app/areas/terceiro-setor"
   ],
   "exclude": [
     "node_modules"

@@ -132,7 +132,7 @@ export default function Header() {
 								Direito Trabalhista
 							</a>
 							<a
-								href="/areas/terceiro-setor"
+								href="/areas/terceiroSetor"
 								className="block pl-8 pr-4 py-2.5 text-sm text-white azulEscuroTH hover:bg-blue-50 rounded-lg transition-colors duration-200"
 								onClick={() => setOpen(false)}
 							>
