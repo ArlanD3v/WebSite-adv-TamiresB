@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Menu, X, Scale, ChevronDown } from "lucide-react";
 
 
-export default function Header() {
+export const Header = () => {
 	const [open, setOpen] = useState(false);
 	const [areasOpen, setAreasOpen] = useState(false);
 

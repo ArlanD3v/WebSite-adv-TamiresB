@@ -92,7 +92,7 @@ export default function ({
 									)}
 
 									<div className="flex items-start gap-4">
-										<div className={`w-14 h-14 rounded-xl bg-gradient-to-br ${area.gradient} flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-110`}>
+										<div className={`w-14 h-14 rounded-xl bg-linear-to-br ${area.gradient} flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-110`}>
 											<Icon className="w-7 h-7 text-white" />
 										</div>
 										<div className="flex-1">
@@ -140,7 +140,7 @@ export default function ({
 
 			{/* CTA Section */}
 			<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
-				<div className="bg-gradient-to-r from-blue-600 to-blue-700 rounded-3xl p-8 lg:p-12 text-white text-center shadow-2xl">
+				<div className="bg-linear-to-r from-blue-600 to-blue-700 rounded-3xl p-8 lg:p-12 text-white text-center shadow-2xl">
 					<h2 className="text-2xl lg:text-3xl font-bold mb-4">
 						Precisa de Consultoria Jurídica?
 					</h2>
