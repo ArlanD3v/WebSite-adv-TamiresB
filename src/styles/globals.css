@@ -20,7 +20,7 @@
   --color-background: var(--background);
   --color-foreground: var(--foreground);
 
-  --color-text-main: var(--text-main);
+  --color-main: var(--text-main);
   --color-muted: var(--muted);
   --color-border-soft: var(--border-soft);
 

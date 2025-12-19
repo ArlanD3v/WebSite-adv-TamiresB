@@ -1,4 +1,3 @@
-import { url } from "inspector";
 import { useMemo } from "react";
 
 interface WhatsAppData {

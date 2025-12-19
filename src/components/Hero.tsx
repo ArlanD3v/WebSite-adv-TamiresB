@@ -4,23 +4,31 @@ import Image from "next/image";
 
 export const Hero = () => {
 	return (
-		<section className="relative w-full min-h-screen flex items-center overflow-hidden marromClaro pt-20">
+		<section className="relative w-full min-h-screen flex items-center overflow-hidden bg-soft pt-20">
 			{/* Elementos decorativos de fundo */}
 			<div className="absolute inset-0 overflow-hidden pointer-events-none">
 				<div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-150 h-150 bg-linear-to-br from-blue-100/10 to-purple-100/10 rounded-full blur-3xl"></div>
 			</div>
 
-			<div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
-				<div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
+			<div className="relative max-w-7xl mx-auto px-4 lg:px-8 py-4 lg:py-20">
+				<div className="grid lg:grid-cols-2 gap-6 lg:gap-16 mt-8">
 					{/* Foto - LADO ESQUERDO */}
-					<div className="relative order-2 lg:order-1">
+					<div className="relative order-1 ">
 						{/* Card principal com foto */}
 						<div className="relative group">
 							{/* Decoração de fundo */}
 							<div className="absolute -inset-4 bg-linear-to-br from-blue-600 to-purple-600 rounded-3xl blur-2xl opacity-20 group-hover:opacity-30 transition-opacity duration-500"></div>
+							<div className="flex w-full justify-center">
+								<div className="inline-flex md:hidden bg-black gap-2 mb-6 px-4 py-2 rounded-full bg-linear-to-r from-blue-600/80 to-purple-600/80 border border-blue-600/20">
+									<Sparkles className="w-4 h-4 text-white" />
+									<span className="text-sm font-semibold text-white">
+										Advocacia Trabalhista & Terceiro Setor
+									</span>
+								</div>
+							</div>
 
 							{/* Container da foto */}
-							<div className="relative border-5 border-[#272646] rounded-3xl shadow-2xl">
+							<div className=" relative border-5 border-[#272646] rounded-3xl shadow-2xl">
 								<div className="relative w-full h-112.5 sm:h-137.5 lg:h-155 rounded-[22px] overflow-hidden">
 									<Image
 										src="/images/tamires.jpg"
@@ -55,13 +63,13 @@ export const Hero = () => {
 										<Award className="w-5 h-5 text-blue-600" />
 									</div>
 									<div>
-										<div className="text-2xl font-bold text-gray-900">15+</div>
+										<div className="text-2xl font-bold text-gray-900">4+</div>
 										<div className="text-xs text-gray-600">Anos</div>
 									</div>
 								</div>
 							</div>
 
-							<div className="absolute -bottom-6 -left-6 bg-white rounded-2xl shadow-xl p-4 hidden lg:block animate-float-delayed">
+							<div className="absolute -top-6 -left-6 bg-white rounded-2xl shadow-xl p-4 hidden lg:block animate-float-delayed">
 								<div className="flex items-center gap-3">
 									<div className="w-10 h-10 bg-purple-100 rounded-xl flex items-center justify-center">
 										<Users className="w-5 h-5 text-purple-600" />
@@ -77,8 +85,8 @@ export const Hero = () => {
 
 					{/* Texto - LADO DIREITO */}
 					<div className="order-1 lg:order-2">
-						{/* Badge superior */}
-						<div className="inline-flex items-center gap-2 mb-6 px-4 py-2 rounded-full bg-linear-to-r from-blue-600 to-purple-600 border border-blue-600/20">
+
+						<div className="hidden md:inline-flex items-center gap-2 mb-6 px-4 py-2 rounded-full bg-linear-to-r from-blue-600/80 to-purple-600/80 border border-blue-600/20">
 							<Sparkles className="w-4 h-4 text-white" />
 							<span className="text-sm font-semibold text-white">
 								Advocacia Trabalhista & Terceiro Setor
@@ -94,13 +102,13 @@ export const Hero = () => {
 						</h1>
 
 						{/* Descrição */}
-						<p className="text-lg sm:text-xl text-gray-200 mb-6 leading-relaxed">
-							Atuação especializada em <strong className="azulEscuroT">Direito do Trabalho</strong> e
-							assessoria jurídica para organizações do <strong className="azulEscuroT">Terceiro Setor</strong>,
+						<p className="text-lg sm:text-xl text-main/90 mb-6 leading-relaxed">
+							Atuação especializada em <strong className="text-main">Direito do Trabalho</strong> e
+							assessoria jurídica para organizações do <strong className="text-main">Terceiro Setor</strong>,
 							com foco em segurança jurídica, ética e resultados sustentáveis.
 						</p>
 
-						<p className="text-base text-gray-200 mb-8 leading-relaxed">
+						<p className="text-base text-main/90 mb-8 leading-relaxed">
 							Compromisso com atendimento personalizado, linguagem acessível e
 							estratégias jurídicas alinhadas à realidade de cada cliente.
 						</p>
@@ -110,7 +118,7 @@ export const Hero = () => {
 							<div className="flex flex-col items-center bg-white rounded-xl p-4 shadow-sm border border-gray-100 hover:shadow-md transition-shadow duration-300">
 								<Scale className="w-8 h-8 text-blue-600 mb-2" />
 								<p className="text-sm font-semibold text-gray-900">Experiência</p>
-								<p className="text-xs text-gray-600 mt-1">15+ anos atuando</p>
+								<p className="text-xs text-gray-600 mt-1">4+ anos atuando</p>
 							</div>
 							<div className="flex flex-col items-center bg-white rounded-xl p-4 shadow-sm border border-gray-100 hover:shadow-md transition-shadow duration-300">
 								<TrendingUp className="w-8 h-8 text-purple-600 mb-2" />
@@ -128,7 +136,7 @@ export const Hero = () => {
 						<div className="flex flex-col sm:flex-row gap-4">
 							<a
 								href="/contato"
-								className="group inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl marromEscuro text-white font-semibold azulEscuroH transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
+								className="group inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl  text-white font-semibold bg-foreground hover:bg-accent hover:text-main *:transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
 							>
 								Agende uma Reunião
 								<ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
@@ -136,7 +144,7 @@ export const Hero = () => {
 
 							<a
 								href="/areas/trabalhista"
-								className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl border-2 border-gray-300 text-gray-700 font-semibold hover:text-white hover:bg-linear-to-r hover:from-blue-600 hover:to-purple-600 transition-all duration-300"
+								className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl border-2 border-gray-300 text-gray-700 font-semibold bg-white hover:text-white hover:bg-linear-to-r hover:from-foreground/90 hover:to-accent transition-all duration-300"
 							>
 								Áreas de Atuação
 							</a>

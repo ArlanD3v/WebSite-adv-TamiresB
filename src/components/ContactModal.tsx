@@ -13,12 +13,12 @@ export const ContactModal = ({ open, onClose }: Props) => {
 
 	return (
 		<div className="fixed inset-0 bg-black/5 backdrop-blur-sm flex items-center justify-center z-50 p-4">
-			<div className="bg-background/80 rounded-2xl p-6 w-full max-w-sm shadow-2xl relative">
+			<div className="bg-background/90 rounded-2xl p-6 w-full max-w-sm shadow-2xl relative">
 				<button
 					onClick={onClose}
 					className="absolute top-1 right-2 text-gray-500 hover:text-gray-700"
 				>
-					<X className="text-accent w-5 h-5 m-1 cursor-pointer" />
+					<X className="text-main w-5 h-5 m-1 cursor-pointer" />
 				</button>
 				<h2 className="text-center  text-lg mb-2 font-bold text-shadow-lg">Estou disponivel nos canais</h2>
 				<div className="flex flex-col gap-3">
