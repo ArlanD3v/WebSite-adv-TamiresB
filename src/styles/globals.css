@@ -4,6 +4,8 @@
 :root {
   --background: #FAFAF7;
   --foreground: #0B2545;
+  --azul: #0B2545;
+
 
   --main: #1C1C1C;
   --muted: #5F6368;
@@ -20,9 +22,10 @@
   --color-background: var(--background);
   --color-foreground: var(--foreground);
 
-  --color-main: var(--text-main);
+  --color-main: var(--main);
   --color-muted: var(--muted);
   --color-border-soft: var(--border-soft);
+  --color-azul:var(--azul);
 
   --color-soft: var(--soft);
   --color-accent: var(--accent);

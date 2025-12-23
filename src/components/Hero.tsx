@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export const Hero = () => {
 	return (
-		<section className="relative w-full min-h-screen flex items-center overflow-hidden bg-soft  pt-10 md:pt-20">
+		<section className="relative w-full min-h-screen flex items-center overflow-hidden bg-soft pt-10 md:pt-20">
 			{/* Elementos decorativos de fundo */}
 			<div className="absolute inset-0 overflow-hidden pointer-events-none">
 				<div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-150 h-150 bg-linear-to-br from-amber-100 to-purple-100 rounded-full blur-3xl"></div>
@@ -39,14 +39,14 @@ export const Hero = () => {
 									/>
 
 									{/* Badge flutuante */}
-									<div className="absolute bottom-6 left-6 right-6 bg-yellow-800/20 backdrop-blur-md rounded-2xl p-4 shadow-xl">
+									<div className="absolute bottom-6 left-6 right-6 bg-yellow-800/30 backdrop-blur-md rounded-2xl p-4 shadow-xl">
 										<div className="flex items-center gap-3">
 											<div className="w-12 h-12 bg-linear-to-br from-yellow-600 to-yellow-700 rounded-xl flex items-center justify-center shrink-0">
 												<Scale className="w-6 h-6 text-white" />
 											</div>
-											<div>
-												<div className="font-bold text-white">Dra. Tamires</div>
-												<div className="text-sm text-white/80">OAB/GO 00.000</div>
+											<div className="flex flex-col w-full text-center">
+												<p className="font-bold text-white">Dra. Tamires</p>
+												<p className="text-md text-white/80">OAB/DF 71.725</p>
 											</div>
 											<div className="ml-auto">
 												<div className="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
@@ -94,42 +94,48 @@ export const Hero = () => {
 						</div>
 
 						{/* Título principal */}
-						<h1 className="text-4xl sm:text-4xl lg:text-5xl font-bold leading-tight mb-6 text-gray-900">
-							Soluções jurídicas
-							<span className="block mt-2 bg-linear-to-r from-amber-500 to-purple-700 bg-clip-text text-transparent">
-								claras e estratégicas
+						<h1 className="text-4xl sm:text-4xl lg:text-5xl font-bold leading-tight mb-6 text-azul/80">
+							Soluções jurídicas claras,
+							<span className="ml-2 mt-2 bg-linear-to-bl from-yellow-700/25 to-yellow-800 bg-clip-text text-transparent">
+								estratégicas
 							</span>
+							<p className="bg-linear-to-br from-yellow-700 to-azul/60 bg-clip-text text-transparent">e humanizadas</p>
 						</h1>
 
 						{/* Descrição */}
 						<p className="text-lg sm:text-xl text-main mb-6 leading-relaxed">
 							Atuação especializada em <strong className="text-main">Direito do Trabalho</strong> e
-							assessoria jurídica para organizações do <strong className="text-main">Terceiro Setor</strong>,
+							organizações do <strong className="text-main">Terceiro Setor</strong>,
 							com foco em segurança jurídica, ética e resultados sustentáveis.
 						</p>
 
 						<p className="text-base text-main/90 mb-8 leading-relaxed">
-							Compromisso com atendimento personalizado, linguagem acessível e
-							estratégias jurídicas alinhadas à realidade de cada cliente.
+							Compromisso de unir a proteção trabalhista e a segurança jurídica para fortalecer
+							relações de trabalho e iniciativas de impacto social.
+						</p>
+						<p className="text-base text-main mb-8">
+							Tudo isso de uma forma que você se sinta protegido juridicamente e acolhido
 						</p>
 
 						{/* Diferenciais em cards */}
+
 						<div className="grid sm:grid-cols-3 gap-4 mb-8">
-							<div className="flex flex-col items-center bg-yellow-800/25 backdrop-blur-md rounded-xl p-4 shadow-sm border border-gray-100 hover:shadow-md transition-shadow duration-300">
+							<div className="flex flex-col items-center bg-yellow-800/15 rounded-xl p-4 shadow-sm border border-gray-200 hover:shadow-md transition-shadow duration-300">
 								<Scale className="w-8 h-8 text-blue-600 mb-2" />
 								<p className="text-sm font-semibold text-gray-900">Experiência</p>
-								<p className="text-xs text-gray-700 mt-1">4+ anos atuando</p>
+								<p className="text-xs text-gray-600 mt-1">4+ anos atuando</p>
 							</div>
 							<div className="flex flex-col items-center bg-yellow-800/25 backdrop-blur-md rounded-xl p-4 shadow-sm border border-gray-100 hover:shadow-md transition-shadow duration-300">
 								<TrendingUp className="w-8 h-8 text-purple-600 mb-2" />
 								<p className="text-sm font-semibold text-gray-900">Resultados</p>
 								<p className="text-xs text-gray-700 mt-1">98% de satisfação</p>
 							</div>
-							<div className="flex flex-col items-center bg-yellow-800/25 backdrop-blur-md rounded-xl p-4 shadow-sm border border-gray-100 hover:shadow-md transition-shadow duration-300">
+							<div className="flex flex-col items-center bg-yellow-800/35 backdrop-blur-md rounded-xl p-4 shadow-sm border border-gray-100 hover:shadow-md transition-shadow duration-300">
 								<Users className="w-8 h-8 text-blue-600 mb-2" />
 								<p className="text-sm font-semibold text-gray-900">Confiança</p>
-								<p className="text-xs text-gray-700 mt-1">500+ clientes</p>
+								<p className="text-xs text-gray-800 mt-1">500+ clientes</p>
 							</div>
+
 						</div>
 
 						{/* CTAs */}
