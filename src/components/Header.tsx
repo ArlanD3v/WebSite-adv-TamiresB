@@ -13,11 +13,11 @@ export const Header = () => {
 				<div className="flex items-center justify-between h-16 lg:h-20">
 					{/* Logo */}
 					<a href="/" className="flex items-center gap-3 group">
-						<div className="w-10 h-10 bg-linear-to-br from-blue-600 to-blue-700 rounded-lg flex items-center justify-center shadow-md group-hover:shadow-lg transition-all duration-300 group-hover:scale-105">
+						<div className="w-10 h-10 bg-linear-to-br from-amber-600 to-amber-800 rounded-lg flex items-center justify-center shadow-md group-hover:shadow-lg transition-all duration-300 group-hover:scale-105">
 							<Scale className="w-5 h-5 text-white" />
 						</div>
 						<div className="flex flex-col">
-							<span className="text-lg font-bold text-main leading-tight">
+							<span className="text-lg font-bold text-soft leading-tight">
 								Tamires Borges
 							</span>
 							<span className="text-xs text-accent font-medium">
@@ -30,14 +30,14 @@ export const Header = () => {
 					<div className="hidden lg:flex items-center gap-1">
 						<a
 							href="/"
-							className="px-4 py-2 text-sm font-medium text-main hover:bg-foreground hover:text-soft rounded-lg transition-all duration-200"
+							className="px-4 py-2 text-sm font-medium text-foreground hover:bg-yellow-800/90 hover:text-soft rounded-lg transition-all duration-200"
 						>
 							Início
 						</a>
 
 						{/* Dropdown Areas */}
 						<div className="relative group">
-							<button className="px-4 py-2 text-sm font-medium text-main hover:bg-foreground hover:text-soft rounded-lg transition-all duration-200 flex items-center gap-1">
+							<button className="px-4 py-2 text-sm font-medium text-foreground hover:bg-yellow-800/90 hover:text-soft rounded-lg transition-all duration-200 flex items-center gap-1">
 								Áreas de Atuação
 								<ChevronDown className="w-4 h-4 group-hover:rotate-180 transition-transform duration-300" />
 							</button>
@@ -71,13 +71,13 @@ export const Header = () => {
 
 						<a
 							href="/artigos"
-							className="px-4 py-2 text-sm font-medium text-main hover:bg-foreground hover:text-soft rounded-lg transition-all duration-200"
+							className="px-4 py-2 text-sm font-medium text-foreground hover:bg-yellow-800/90 hover:text-soft rounded-lg transition-all duration-200"
 						>
 							Artigos
 						</a>
 						<a
 							href="/contato"
-							className="ml-4 px-6 py-2.5 text-sm font-semibold text-white bg-foreground/80 hover:bg-foreground rounded-lg shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105"
+							className="ml-4 px-6 py-2.5 text-sm font-semibold text-mwin bg-soft hover:bg-yellow-800/90 hover:text-white rounded-lg shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105"
 						>
 							Agende uma Reunião
 						</a>
@@ -85,7 +85,7 @@ export const Header = () => {
 
 					{/* Mobile Button */}
 					<button
-						className="lg:hidden p-2 text-main hover:bg-foreground hover:text-soft rounded-lg transition-colors duration-200 cursor-pointer"
+						className="lg:hidden p-2 text-foreground hover:bg-foreground hover:text-soft rounded-lg transition-colors duration-200 cursor-pointer"
 						onClick={() => setOpen(!open)}
 						aria-label="Menu"
 					>
@@ -96,22 +96,22 @@ export const Header = () => {
 
 			{/* Mobile Menu */}
 			<div
-				className={`lg:hidden bg-foreground/90  border-t border-accent overflow-hidden transition-all duration-300 ${open ? "max-h-96" : "max-h-0"
+				className={`lg:hidden bg-white/90 border-t border-accent overflow-hidden transition-all duration-300 ${open ? "max-h-96" : "max-h-0"
 					}`}
 			>
 				<div className="px-4 py-4 space-y-1">
 					<a
 						href="/"
-						className="block px-4 py-3 text-sm font-medium text-white bg-foreground/20 hover:bg-foreground rounded-lg transition-colors duration-200"
+						className="block px-4 py-3 text-sm font-medium text-main bg-yellow-800/20 hover:bg-yellow-950/60 rounded-lg transition-colors duration-200"
 						onClick={() => setOpen(false)}
 					>
 						Início
 					</a>
 
 					{/* Mobile Areas Dropdown */}
-					<div>
+					<div className="flex flex-col gap-1.5">
 						<button
-							className="w-full flex items-center justify-between px-4 py-3 text-sm font-medium text-white bg-foreground/20 hover:bg-foreground rounded-lg transition-colors duration-200"
+							className="w-full flex items-center justify-between  px-4 py-3 text-sm font-medium text-main bg-yellow-800/20 hover:bg-yellow-950/60 rounded-lg transition-colors duration-200"
 							onClick={() => setAreasOpen(!areasOpen)}
 						>
 							Áreas de Atuação
@@ -121,19 +121,19 @@ export const Header = () => {
 							/>
 						</button>
 						<div
-							className={`overflow-hidden transition-all duration-300 ${areasOpen ? "max-h-40" : "max-h-0"
+							className={`overflow-hidden transition-all  space-y-1 duration-300 ${areasOpen ? "max-h-40" : "max-h-0"
 								}`}
 						>
 							<a
 								href="/areas/trabalhista"
-								className="block pl-8 pr-4 py-2.5 text-sm text-white hover:bg-foreground rounded-lg transition-colors duration-200"
+								className="w-[80%] block pl-8 pr-4 py-2.5 text-sm text-white bg-yellow-800/80 hover:bg-foreground rounded-lg transition-colors duration-200"
 								onClick={() => setOpen(false)}
 							>
 								Direito Trabalhista
 							</a>
 							<a
 								href="/areas/terceiroSetor"
-								className="block pl-8 pr-4 py-2.5 text-sm text-white hover:bg-foreground rounded-lg transition-colors duration-200"
+								className="w-[80%] block pl-8 pr-4 py-2.5 text-sm text-white bg-yellow-800/80 hover:bg-foreground rounded-lg transition-colors duration-200"
 								onClick={() => setOpen(false)}
 							>
 								Terceiro Setor
@@ -143,14 +143,14 @@ export const Header = () => {
 
 					<a
 						href="/artigos"
-						className="block px-4 py-3 text-sm font-medium text-white bg-foreground/20 hover:bg-foreground rounded-lg transition-colors duration-200"
+						className="block px-4 py-3 text-sm font-medium text-main bg-yellow-800/20 hover:bg-yellow-950/60 rounded-lg transition-colors duration-200"
 						onClick={() => setOpen(false)}
 					>
 						Artigos
 					</a>
 					<a
 						href="/contato"
-						className="block text-center px-4 py-3 text-sm font-semibold text-main bg-background/80 hover:bg-accent rounded-lg shadow-md hover:shadow-lg transition-all duration-300 mt-2"
+						className="block text-center px-4 py-3 text-sm font-semibold text-main bg-yellow-800/80 hover:bg-yellow-800/90 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 mt-2"
 						onClick={() => setOpen(false)}
 					>
 						Contato
