@@ -1,5 +1,7 @@
+'use client'
 import { useState, useEffect } from "react";
 import { Briefcase, Heart, ChevronRight, Scale } from "lucide-react";
+import { Header } from "@/src/components/Header";
 
 export default function ({
 	children,
@@ -22,7 +24,7 @@ export default function ({
 			icon: Briefcase,
 			description: "Defesa de direitos e relações de trabalho",
 			href: "/areas/trabalhista",
-			gradient: "from-blue-500 to-blue-600"
+			gradient: "bg-amber-800/75"
 		},
 		{
 			id: "terceiro-setor",
@@ -30,39 +32,32 @@ export default function ({
 			icon: Heart,
 			description: "Assessoria para ONGs e associações",
 			href: "/areas/terceiro-setor",
-			gradient: "from-purple-500 to-purple-600"
+			gradient: "bg-blue-600/80"
 		}
 	];
 
 	return (
-		<section className="pt-20 min-h-screen bg-linear-to-b from-gray-50 to-white">
+
+		<section className="min-h-screen  bg-linear-to-tr from-amber-100 to-red-100">
+			<Header />
 			{/* Hero Section */}
-			<div className="relative bg-linear-to-br from-blue-600 via-blue-700 to-blue-800 text-white overflow-hidden">
-				{/* Background Pattern */}
-				<div className="absolute inset-0 opacity-10">
-					<div className="absolute top-0 left-0 w-96 h-96 bg-white rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
-					<div className="absolute bottom-0 right-0 w-96 h-96 bg-white rounded-full blur-3xl translate-x-1/2 translate-y-1/2"></div>
-				</div>
+			<div className="relative  bg-linear-to-br from-amber-100 to-red-100 text-azul overflow-hidden">
 
 				<div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
-					{/* Breadcrumb */}
-					<div className="flex items-center gap-2 text-sm text-blue-100 mb-6">
-						<a href="/" className="hover:text-white transition">
-							Início
-						</a>
-						<ChevronRight className="w-4 h-4" />
-						<span className="text-white font-medium">Áreas de Atuação</span>
-					</div>
 
-					<div className="flex items-start gap-6 mb-8">
-						<div className="hidden sm:flex w-16 h-16 bg-white/10 backdrop-blur-sm rounded-2xl items-center justify-center border border-white/20">
-							<Scale className="w-8 h-8 text-white" />
+					<div className="flex items-start gap-6 mb-4">
+						<div className="hidden mt-7 sm:flex w-16 h-16 bg-background/90 backdrop-blur-sm rounded-2xl items-center justify-center border border-white/20">
+							<Scale className="w-8 h-8 text-foreground" />
 						</div>
-						<div className="flex-1">
-							<h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 leading-tight">
-								Áreas de Atuação
+						<div className="flex-1 mt-8">
+							<h1 className="text-4xl sm:text-4xl lg:text-5xl font-bold leading-tight mb-2 bg-linear-to-bl from-back to-yellow-800 bg-clip-text text-transparent">
+								Áreas
+								<span className="ml-2 mt-2 bg-linear-to-bl from-yellow-700/25 to-yellow-800 bg-clip-text text-transparent">
+									de atuação
+								</span>
+
 							</h1>
-							<p className="text-lg sm:text-xl text-blue-100 max-w-3xl leading-relaxed">
+							<p className="text-lg sm:text-xl text-zinc-600 max-w-3xl leading-relaxed">
 								Atuação jurídica focada em soluções claras, estratégicas e humanizadas,
 								com experiência especializada em Direito do Trabalho e Terceiro Setor.
 							</p>
@@ -79,15 +74,15 @@ export default function ({
 								<a
 									key={area.id}
 									href={area.href}
-									className={`group relative bg-white/10 backdrop-blur-sm rounded-2xl p-6 lg:p-8 border transition-all duration-300 ${isActive
-										? "border-white shadow-2xl scale-105 bg-white/20"
-										: "border-white/20 hover:border-white/40 hover:bg-white/15 hover:scale-105"
+									className={`group relative bg-amber-800/20 backdrop-blur-sm rounded-2xl p-6 lg:p-8 border transition-all duration-300 ${isActive
+										? "border-muted shadow-2xl bg-foreground/20"
+										: "border-white/20 hover:border-white/40 hover:bg-amber-800/30 hover:scale-104"
 										}`}
 								>
 									{/* Indicador de Ativo */}
 									{isActive && (
-										<div className="absolute top-4 right-4">
-											<div className="w-3 h-3 bg-green-400 rounded-full animate-pulse shadow-lg"></div>
+										<div className="absolute top-[45%] right-5">
+											<div className="w-3 h-3 bg-green-500 rounded-full animate-pulse shadow-lg"></div>
 										</div>
 									)}
 
@@ -99,12 +94,11 @@ export default function ({
 											<h3 className="text-xl lg:text-2xl font-bold mb-2 group-hover:translate-x-1 transition-transform duration-300">
 												{area.title}
 											</h3>
-											<p className="text-blue-100 text-sm lg:text-base">
+											<p className="text-muted text-sm lg:text-base">
 												{area.description}
 											</p>
 										</div>
-										<ChevronRight className={`w-5 h-5 text-white/60 group-hover:text-white group-hover:translate-x-1 transition-all duration-300 ${isActive ? "text-white" : ""
-											}`} />
+
 									</div>
 								</a>
 							);
@@ -112,19 +106,19 @@ export default function ({
 					</div>
 
 					{/* Stats ou Call to Action */}
-					<div className="mt-12 pt-8 border-t border-white/20">
-						<div className="grid grid-cols-3 gap-4 lg:gap-8 text-center">
-							<div>
-								<div className="text-2xl lg:text-3xl font-bold mb-1">15+</div>
-								<div className="text-sm lg:text-base text-blue-100">Anos de Experiência</div>
+					<div className="mt-6 pt-4 border-t border-white/20">
+						<div className="flex justify-around gap-4 lg:gap-8 text-center">
+							<div className="w-fit flex flex-col p-2 border rounded-2xl shadow-2xl">
+								<div className="text-2xl lg:text-3xl font-bold mb-1">4+</div>
+								<div className="text-sm lg:text-base text-muted">Anos de Experiência</div>
 							</div>
 							<div>
 								<div className="text-2xl lg:text-3xl font-bold mb-1">500+</div>
-								<div className="text-sm lg:text-base text-blue-100">Casos Atendidos</div>
+								<div className="text-sm lg:text-base text-muted">Casos Atendidos</div>
 							</div>
 							<div>
 								<div className="text-2xl lg:text-3xl font-bold mb-1">98%</div>
-								<div className="text-sm lg:text-base text-blue-100">Satisfação</div>
+								<div className="text-sm lg:text-base text-muted">Satisfação</div>
 							</div>
 						</div>
 					</div>
@@ -133,7 +127,7 @@ export default function ({
 
 			{/* Conteúdo específico da área */}
 			<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
-				<div className="bg-white rounded-3xl shadow-lg border border-gray-100 p-6 lg:p-12">
+				<div className="bg-background/30 rounded-3xl shadow-lg border border-gray-100 p-6 lg:p-12">
 					{children}
 				</div>
 			</div>
@@ -152,7 +146,7 @@ export default function ({
 						href="/contato"
 						className="inline-flex items-center gap-2 bg-white text-blue-600 px-8 py-4 rounded-xl font-semibold hover:bg-blue-50 transition-all duration-300 hover:scale-105 shadow-lg"
 					>
-						Agendar Consulta
+						Agendar Reunião
 						<ChevronRight className="w-5 h-5" />
 					</a>
 				</div>

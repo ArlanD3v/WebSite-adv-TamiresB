@@ -77,7 +77,7 @@ export const Header = () => {
 						</a>
 						<a
 							href="/contato"
-							className="ml-4 px-6 py-2.5 text-sm font-semibold text-mwin bg-soft hover:bg-yellow-800/90 hover:text-white rounded-lg shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105"
+							className="ml-4 px-6 py-2.5 text-sm font-semibold text-azul bg-soft hover:bg-amber-700/90 hover:text-white rounded-lg shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105"
 						>
 							Agende uma Reunião
 						</a>
@@ -126,14 +126,14 @@ export const Header = () => {
 						>
 							<a
 								href="/areas/trabalhista"
-								className="w-[80%] block pl-8 pr-4 py-2.5 text-sm text-white bg-yellow-800/80 hover:bg-foreground rounded-lg transition-colors duration-200"
+								className="w-[80%] block pl-8 pr-4 py-2.5 text-sm text-white bg-yellow-800/80 hover:bg-azul rounded-lg transition-colors duration-200"
 								onClick={() => setOpen(false)}
 							>
 								Direito Trabalhista
 							</a>
 							<a
 								href="/areas/terceiroSetor"
-								className="w-[80%] block pl-8 pr-4 py-2.5 text-sm text-white bg-yellow-800/80 hover:bg-foreground rounded-lg transition-colors duration-200"
+								className="w-[80%] block pl-8 pr-4 py-2.5 text-sm text-white bg-yellow-800/80 hover:bg-azul rounded-lg transition-colors duration-200"
 								onClick={() => setOpen(false)}
 							>
 								Terceiro Setor
@@ -150,7 +150,7 @@ export const Header = () => {
 					</a>
 					<a
 						href="/contato"
-						className="block text-center px-4 py-3 text-sm font-semibold text-main bg-yellow-800/80 hover:bg-yellow-800/90 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 mt-2"
+						className="block text-center px-4 py-3 text-sm font-semibold text-main bg-yellow-800/80 hover:bg-azul hover:text-soft rounded-lg shadow-md hover:shadow-lg transition-all duration-300 mt-2"
 						onClick={() => setOpen(false)}
 					>
 						Contato
