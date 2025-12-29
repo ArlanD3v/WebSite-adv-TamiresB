@@ -71,8 +71,8 @@ export const Hero = () => {
 
 							<div className="absolute -top-6 -left-6 bg-white rounded-2xl shadow-xl p-4 hidden lg:block animate-float-delayed">
 								<div className="flex items-center gap-3">
-									<div className="w-10 h-10 bg-purple-100 rounded-xl flex items-center justify-center">
-										<Users className="w-5 h-5 text-purple-600" />
+									<div className="w-10 h-10 bg-amber-800/25 rounded-xl flex items-center justify-center">
+										<Users className="w-5 h-5 text-white" />
 									</div>
 									<div>
 										<div className="text-2xl font-bold text-gray-900">500+</div>
@@ -104,7 +104,7 @@ export const Hero = () => {
 
 						{/* Descrição */}
 						<p className="text-lg sm:text-xl text-main mb-6 leading-relaxed">
-							Atuação especializada em <strong className="text-main">Direito do Trabalho</strong> e
+							Atuação em todo Brasil, especializada em <strong className="text-main">Direito do Trabalho</strong> e
 							organizações do <strong className="text-main">Terceiro Setor</strong>,
 							com foco em segurança jurídica, ética e resultados sustentáveis.
 						</p>
