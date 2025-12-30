@@ -2,6 +2,8 @@
 import { useState, useEffect } from "react";
 import { Briefcase, Heart, ChevronRight, Scale } from "lucide-react";
 import { Header } from "@/src/components/Header";
+import { CTAButton } from "@/src/components/CTAButton";
+
 
 export default function ({
 	children,
@@ -35,13 +37,15 @@ export default function ({
 		}
 	];
 
+
 	return (
 		<section className="min-h-screen bg-linear-to-tr from-amber-100 to-red-100">
 			<Header />
+			<CTAButton />
 
 			{/* Hero Section */}
 			<div className="relative bg-linear-to-br mt-10 from-amber-100 to-red-100 text-azul overflow-hidden">
-				<div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-24">
+				<div className="relative max-w-7xl mx-auto px-1 sm:px-6 lg:px-16 pt-16 mb-8">
 
 					<div className="flex flex-col sm:flex-row items-start gap-4 sm:gap-6 mb-6">
 						{/* Ícone - oculto em mobile */}
@@ -106,15 +110,15 @@ export default function ({
 			</div>
 
 			{/* Conteúdo específico da área */}
-			<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-20">
+			<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-4">
 				<div className="bg-amber-700/20 rounded-2xl sm:rounded-3xl shadow-lg border border-gray-100 p-5 sm:p-8 lg:p-12">
 					{children}
 				</div>
 			</div>
 
 			{/* CTA Section */}
-			<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-12 sm:pb-16 lg:pb-20">
-				<div className="bg-linear-to-r from-blue-600 to-blue-700 rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-12 text-white text-center shadow-2xl">
+			<div className="w-fit mx-auto px-4 sm:px-6 lg:px-8 pb-22">
+				<div className="bg-linear-to-r from-blue-800 to-blue-900 rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-12 text-white text-center shadow-2xl">
 					<h2 className="text-xl sm:text-2xl lg:text-3xl font-bold mb-3 sm:mb-4">
 						Precisa de Consultoria Jurídica?
 					</h2>

@@ -1,3 +1,4 @@
+'use client'
 import Link from "next/link";
 import { Heart, Sparkles, Award, Users, CheckCircle, Target } from "lucide-react";
 

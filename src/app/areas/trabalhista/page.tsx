@@ -125,7 +125,7 @@ function TrabalhistaPage() {
 			<section className="relative">
 				<div className="absolute inset-0 bg-linear-to-br from-amber-800/20 to-yellow-700/20 rounded-3xl blur-2xl"></div>
 
-				<div className="relative bg-linear-to-br from-amber-900/90 to-yellow-800/90 backdrop-blur-sm rounded-2xl sm:rounded-3xl p-8 sm:p-10 lg:p-12 text-center shadow-2xl border border-amber-700/50 overflow-hidden">
+				<div className="relative bg-linear-to-br from-amber-900/90 to-yellow-800/90 backdrop-blur-sm rounded-2xl sm:rounded-3xl p-8 text-center shadow-2xl shadow-black/60 overflow-hidden">
 					{/* Decoração de fundo */}
 					<div className="absolute top-0 left-0 w-full h-full opacity-10">
 						<div className="absolute top-10 left-10 w-32 h-32 bg-white rounded-full blur-3xl"></div>
