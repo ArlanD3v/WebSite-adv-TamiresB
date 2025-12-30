@@ -11,7 +11,6 @@ export default function ({
 	const [activeArea, setActiveArea] = useState("");
 
 	useEffect(() => {
-
 		const path = window.location.pathname;
 		if (path.includes("trabalhista")) setActiveArea("trabalhista");
 		else if (path.includes("terceiro-setor")) setActiveArea("terceiro-setor");
@@ -37,35 +36,35 @@ export default function ({
 	];
 
 	return (
-
-		<section className="min-h-screen  bg-linear-to-tr from-amber-100 to-red-100">
+		<section className="min-h-screen bg-linear-to-tr from-amber-100 to-red-100">
 			<Header />
+
 			{/* Hero Section */}
-			<div className="relative  bg-linear-to-br from-amber-100 to-red-100 text-azul overflow-hidden">
+			<div className="relative bg-linear-to-br mt-10 from-amber-100 to-red-100 text-azul overflow-hidden">
+				<div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-24">
 
-				<div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
-
-					<div className="flex items-start gap-6 mb-4">
-						<div className="hidden mt-7 sm:flex w-16 h-16 bg-background/90 backdrop-blur-sm rounded-2xl items-center justify-center border border-white/20">
-							<Scale className="w-8 h-8 text-foreground" />
+					<div className="flex flex-col sm:flex-row items-start gap-4 sm:gap-6 mb-6">
+						{/* Ícone - oculto em mobile */}
+						<div className="hidden sm:flex w-14 h-14 lg:w-16 lg:h-16 bg-background/90 backdrop-blur-sm rounded-2xl items-center justify-center border border-white/20 shrink-0">
+							<Scale className="w-7 h-7 lg:w-8 lg:h-8 text-foreground" />
 						</div>
-						<div className="flex-1 mt-8">
-							<h1 className="text-4xl sm:text-4xl lg:text-5xl font-bold leading-tight mb-2 bg-linear-to-bl from-back to-yellow-800 bg-clip-text text-transparent">
+
+						<div className="flex-1">
+							<h1 className="flex justify-center text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight mb-3 sm:mb-2 bg-linear-to-bl from-amber-700 to-yellow-600 bg-clip-text text-transparent">
 								Áreas
-								<span className="ml-2 mt-2 bg-linear-to-bl from-yellow-700/25 to-yellow-800 bg-clip-text text-transparent">
+								<span className="ml-2 block sm:inline sm:ml-2 bg-linear-to-bl from-yellow-700/25 to-yellow-800 bg-clip-text text-transparent">
 									de atuação
 								</span>
-
 							</h1>
-							<p className="text-lg sm:text-xl text-zinc-600 max-w-3xl leading-relaxed">
+							<p className="text-base sm:text-lg lg:text-xl text-zinc-600 max-w-3xl leading-relaxed">
 								Atuação jurídica focada em soluções claras, estratégicas e humanizadas,
 								com experiência especializada em Direito do Trabalho e Terceiro Setor.
 							</p>
 						</div>
 					</div>
 
-					{/* Cards de Áreas */}
-					<div className="grid sm:grid-cols-2 gap-4 lg:gap-6 mt-12">
+					{/* Cards de Áreas*/}
+					<div className="grid grid-cols-1 sm:grid-cols-2 gap-4 lg:gap-6 mt-8 sm:mt-12">
 						{areas.map((area) => {
 							const Icon = area.icon;
 							const isActive = activeArea === area.id;
@@ -74,31 +73,30 @@ export default function ({
 								<a
 									key={area.id}
 									href={area.href}
-									className={`group relative bg-amber-800/20 backdrop-blur-sm rounded-2xl p-6 lg:p-8 border transition-all duration-300 ${isActive
+									className={`group relative bg-amber-800/20 backdrop-blur-sm rounded-xl sm:rounded-2xl p-5 sm:p-6 lg:p-8 border transition-all duration-300 ${isActive
 										? "border-muted shadow-2xl bg-foreground/20"
 										: "border-white/20 hover:border-white/40 hover:bg-amber-800/30 hover:scale-104"
 										}`}
 								>
 									{/* Indicador de Ativo */}
 									{isActive && (
-										<div className="absolute top-[45%] right-5">
-											<div className="w-3 h-3 bg-green-500 rounded-full animate-pulse shadow-lg"></div>
+										<div className="absolute top-[45%] right-5 sm:top-[45%]">
+											<div className="w-2.5 h-2.5 sm:w-3 sm:h-3 bg-green-500 rounded-full animate-pulse shadow-lg"></div>
 										</div>
 									)}
 
-									<div className="flex items-start gap-4">
-										<div className={`w-14 h-14 rounded-xl bg-linear-to-br ${area.gradient} flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-110`}>
-											<Icon className="w-7 h-7 text-white" />
+									<div className="flex items-start gap-3 sm:gap-4">
+										<div className={`w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-linear-to-br ${area.gradient} flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-110 shrink-0`}>
+											<Icon className="w-6 h-6 sm:w-7 sm:h-7 text-white" />
 										</div>
-										<div className="flex-1">
-											<h3 className="text-xl lg:text-2xl font-bold mb-2 group-hover:translate-x-1 transition-transform duration-300">
+										<div className="flex-1 min-w-0">
+											<h3 className="text-lg sm:text-xl lg:text-2xl font-bold mb-1.5 sm:mb-2 group-hover:translate-x-1 transition-transform duration-300">
 												{area.title}
 											</h3>
-											<p className="text-muted text-sm lg:text-base">
+											<p className="text-muted text-sm sm:text-base">
 												{area.description}
 											</p>
 										</div>
-
 									</div>
 								</a>
 							);
@@ -108,28 +106,28 @@ export default function ({
 			</div>
 
 			{/* Conteúdo específico da área */}
-			<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
-				<div className="bg-amber-700/20 rounded-3xl shadow-lg border border-gray-100 p-6 lg:p-12">
+			<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-20">
+				<div className="bg-amber-700/20 rounded-2xl sm:rounded-3xl shadow-lg border border-gray-100 p-5 sm:p-8 lg:p-12">
 					{children}
 				</div>
 			</div>
 
 			{/* CTA Section */}
-			<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
-				<div className="bg-linear-to-r from-blue-600 to-blue-700 rounded-3xl p-8 lg:p-12 text-white text-center shadow-2xl">
-					<h2 className="text-2xl lg:text-3xl font-bold mb-4">
+			<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-12 sm:pb-16 lg:pb-20">
+				<div className="bg-linear-to-r from-blue-600 to-blue-700 rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-12 text-white text-center shadow-2xl">
+					<h2 className="text-xl sm:text-2xl lg:text-3xl font-bold mb-3 sm:mb-4">
 						Precisa de Consultoria Jurídica?
 					</h2>
-					<p className="text-blue-100 mb-8 max-w-2xl mx-auto">
+					<p className="text-blue-100 text-sm sm:text-base mb-6 sm:mb-8 max-w-2xl mx-auto">
 						Agende uma consulta e descubra como podemos ajudar você ou sua organização
 						com soluções jurídicas personalizadas.
 					</p>
 					<a
 						href="/contato"
-						className="inline-flex items-center gap-2 bg-white text-blue-600 px-8 py-4 rounded-xl font-semibold hover:bg-blue-50 transition-all duration-300 hover:scale-105 shadow-lg"
+						className="inline-flex items-center gap-2 bg-white text-blue-600 px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-semibold hover:bg-blue-50 transition-all duration-300 hover:scale-105 shadow-lg text-sm sm:text-base"
 					>
 						Agendar Reunião
-						<ChevronRight className="w-5 h-5" />
+						<ChevronRight className="w-4 h-4 sm:w-5 sm:h-5" />
 					</a>
 				</div>
 			</div>
