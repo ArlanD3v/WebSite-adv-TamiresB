@@ -104,24 +104,6 @@ export default function ({
 							);
 						})}
 					</div>
-
-					{/* Stats ou Call to Action */}
-					<div className="mt-6 pt-4 border-t border-white/20">
-						<div className="flex justify-around gap-4 lg:gap-8 text-center">
-							<div className="w-fit flex flex-col p-3 bg-azul border rounded-2xl shadow-2xl">
-								<div className="text-2xl lg:text-3xl text-white font-bold mb-1">4+</div>
-								<div className="text-sm lg:text-base text-zinc-300">Anos de Experiência</div>
-							</div>
-							<div className="w-fit flex flex-col p-3 bg-azul border rounded-2xl shadow-2xl">
-								<div className="text-2xl lg:text-3xl text-white font-bold mb-1">500+</div>
-								<div className="text-sm lg:text-base text-zinc-300">Casos Atendidos</div>
-							</div>
-							<div className="w-fit flex flex-col p-3 bg-azul border rounded-2xl shadow-2xl">
-								<div className="text-2xl lg:text-3xl text-white font-bold mb-1">98%</div>
-								<div className="text-sm lg:text-base text-zinc-300">Satisfação</div>
-							</div>
-						</div>
-					</div>
 				</div>
 			</div>
 
