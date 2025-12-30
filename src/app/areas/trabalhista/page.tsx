@@ -10,7 +10,7 @@ function TrabalhistaPage() {
 				<h2 className="text-3xl font-semibold text-azul/90 mb-6">
 					Direito do Trabalho
 				</h2>
-				<p className="text-white/70 text-lg leading-relaxed">
+				<p className="text-zinc-600 text-lg leading-relaxed">
 					Atuação jurídica voltada à proteção de direitos, prevenção de conflitos
 					e construção de relações de trabalho seguras, éticas e equilibradas.
 					Cada caso é analisado de forma individual, com linguagem clara e

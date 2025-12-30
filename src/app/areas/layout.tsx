@@ -108,17 +108,17 @@ export default function ({
 					{/* Stats ou Call to Action */}
 					<div className="mt-6 pt-4 border-t border-white/20">
 						<div className="flex justify-around gap-4 lg:gap-8 text-center">
-							<div className="w-fit flex flex-col p-2 border rounded-2xl shadow-2xl">
-								<div className="text-2xl lg:text-3xl font-bold mb-1">4+</div>
-								<div className="text-sm lg:text-base text-muted">Anos de Experiência</div>
+							<div className="w-fit flex flex-col p-3 bg-azul border rounded-2xl shadow-2xl">
+								<div className="text-2xl lg:text-3xl text-white font-bold mb-1">4+</div>
+								<div className="text-sm lg:text-base text-zinc-300">Anos de Experiência</div>
 							</div>
-							<div>
-								<div className="text-2xl lg:text-3xl font-bold mb-1">500+</div>
-								<div className="text-sm lg:text-base text-muted">Casos Atendidos</div>
+							<div className="w-fit flex flex-col p-3 bg-azul border rounded-2xl shadow-2xl">
+								<div className="text-2xl lg:text-3xl text-white font-bold mb-1">500+</div>
+								<div className="text-sm lg:text-base text-zinc-300">Casos Atendidos</div>
 							</div>
-							<div>
-								<div className="text-2xl lg:text-3xl font-bold mb-1">98%</div>
-								<div className="text-sm lg:text-base text-muted">Satisfação</div>
+							<div className="w-fit flex flex-col p-3 bg-azul border rounded-2xl shadow-2xl">
+								<div className="text-2xl lg:text-3xl text-white font-bold mb-1">98%</div>
+								<div className="text-sm lg:text-base text-zinc-300">Satisfação</div>
 							</div>
 						</div>
 					</div>
@@ -127,7 +127,7 @@ export default function ({
 
 			{/* Conteúdo específico da área */}
 			<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
-				<div className="bg-background/30 rounded-3xl shadow-lg border border-gray-100 p-6 lg:p-12">
+				<div className="bg-amber-700/20 rounded-3xl shadow-lg border border-gray-100 p-6 lg:p-12">
 					{children}
 				</div>
 			</div>
