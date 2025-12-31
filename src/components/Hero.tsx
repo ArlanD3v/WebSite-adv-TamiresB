@@ -34,8 +34,8 @@ export const Hero = () => {
 										src="/images/tamires.jpg"
 										alt="Dra. Tamires Borges - Advogada"
 										className="w-full h-full object-cover"
-										width={800}
-										height={400}
+										width={900}
+										height={900}
 									/>
 
 									{/* Badge flutuante */}
