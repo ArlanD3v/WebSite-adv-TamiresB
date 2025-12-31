@@ -1,6 +1,6 @@
 'use client'
 import { useState, useEffect } from "react";
-import { Briefcase, Heart, ChevronRight, Scale } from "lucide-react";
+import { Briefcase, Heart, Scale } from "lucide-react";
 import { Header } from "@/src/components/Header";
 import { CTAButton } from "@/src/components/CTAButton";
 
@@ -23,7 +23,7 @@ export default function ({
 			id: "trabalhista",
 			title: "Direito Trabalhista",
 			icon: Briefcase,
-			description: "Defesa de direitos e relações de trabalho",
+			description: "Proteção de direitos, construindo provas, argumentando no processo e acompanhando do início ao fim",
 			href: "/areas/trabalhista",
 			gradient: "bg-amber-800/75"
 		},
@@ -31,7 +31,7 @@ export default function ({
 			id: "terceiro-setor",
 			title: "Terceiro Setor",
 			icon: Heart,
-			description: "Assessoria para ONGs e associações",
+			description: "Segurança e sustentabilidade jurídica para organizações da sociedade civil",
 			href: "/areas/terceiro-setor",
 			gradient: "bg-blue-600/80"
 		}
@@ -45,7 +45,7 @@ export default function ({
 
 			{/* Hero Section */}
 			<div className="relative bg-linear-to-br mt-10 from-amber-100 to-red-100 text-azul overflow-hidden">
-				<div className="relative max-w-7xl mx-auto px-1 sm:px-6 lg:px-16 pt-16 mb-8">
+				<div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-16 pt-16 mb-8">
 
 					<div className="flex flex-col sm:flex-row items-start gap-4 sm:gap-6 mb-6">
 						{/* Ícone - oculto em mobile */}
@@ -54,13 +54,15 @@ export default function ({
 						</div>
 
 						<div className="flex-1">
-							<h1 className="flex justify-center text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight mb-3 sm:mb-2 bg-linear-to-bl from-amber-700 to-yellow-600 bg-clip-text text-transparent">
-								Áreas
+							<h1 className="text-center sm:text-left text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight mb-3 sm:mb-4">
+								<span className="bg-linear-to-bl from-amber-700 to-yellow-600 bg-clip-text text-transparent">
+									Como posso
+								</span>
 								<span className="ml-2 block sm:inline sm:ml-2 bg-linear-to-bl from-yellow-700/25 to-yellow-800 bg-clip-text text-transparent">
-									de atuação
+									te ajudar?
 								</span>
 							</h1>
-							<p className="text-base sm:text-lg lg:text-xl text-zinc-600 max-w-3xl leading-relaxed">
+							<p className="text-center sm:text-left text-base sm:text-lg lg:text-xl text-zinc-600 max-w-3xl leading-relaxed">
 								Atuação jurídica focada em soluções claras, estratégicas e humanizadas,
 								com experiência especializada em Direito do Trabalho e Terceiro Setor.
 							</p>
@@ -79,12 +81,12 @@ export default function ({
 									href={area.href}
 									className={`group relative bg-amber-800/20 backdrop-blur-sm rounded-xl sm:rounded-2xl p-5 sm:p-6 lg:p-8 border transition-all duration-300 ${isActive
 										? "border-muted shadow-2xl bg-foreground/20"
-										: "border-white/20 hover:border-white/40 hover:bg-amber-800/30 hover:scale-104"
+										: "border-white/20 hover:border-white/40 hover:bg-amber-800/30 hover:scale-102"
 										}`}
 								>
 									{/* Indicador de Ativo */}
 									{isActive && (
-										<div className="absolute top-[45%] right-5 sm:top-[45%]">
+										<div className="absolute top-5 right-5 sm:top-6 sm:right-6">
 											<div className="w-2.5 h-2.5 sm:w-3 sm:h-3 bg-green-500 rounded-full animate-pulse shadow-lg"></div>
 										</div>
 									)}
@@ -94,10 +96,10 @@ export default function ({
 											<Icon className="w-6 h-6 sm:w-7 sm:h-7 text-white" />
 										</div>
 										<div className="flex-1 min-w-0">
-											<h3 className="text-lg sm:text-xl lg:text-2xl font-bold mb-1.5 sm:mb-2 group-hover:translate-x-1 transition-transform duration-300">
+											<h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-azul/90 mb-1.5 sm:mb-2 group-hover:translate-x-1 transition-transform duration-300">
 												{area.title}
 											</h3>
-											<p className="text-muted text-sm sm:text-base">
+											<p className="text-zinc-700 text-sm sm:text-base leading-relaxed">
 												{area.description}
 											</p>
 										</div>
@@ -110,31 +112,13 @@ export default function ({
 			</div>
 
 			{/* Conteúdo específico da área */}
-			<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-4">
+			<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
 				<div className="bg-amber-700/20 rounded-2xl sm:rounded-3xl shadow-lg border border-gray-100 p-5 sm:p-8 lg:p-12">
 					{children}
 				</div>
 			</div>
 
-			{/* CTA Section */}
-			<div className="w-fit mx-auto px-4 sm:px-6 lg:px-8 pb-22">
-				<div className="bg-linear-to-r from-blue-800 to-blue-900 rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-12 text-white text-center shadow-2xl">
-					<h2 className="text-xl sm:text-2xl lg:text-3xl font-bold mb-3 sm:mb-4">
-						Precisa de Consultoria Jurídica?
-					</h2>
-					<p className="text-blue-100 text-sm sm:text-base mb-6 sm:mb-8 max-w-2xl mx-auto">
-						Agende uma consulta e descubra como podemos ajudar você ou sua organização
-						com soluções jurídicas personalizadas.
-					</p>
-					<a
-						href="/contato"
-						className="inline-flex items-center gap-2 bg-white text-blue-600 px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-semibold hover:bg-blue-50 transition-all duration-300 hover:scale-105 shadow-lg text-sm sm:text-base"
-					>
-						Agendar Reunião
-						<ChevronRight className="w-4 h-4 sm:w-5 sm:h-5" />
-					</a>
-				</div>
-			</div>
+
 		</section>
 	);
 }

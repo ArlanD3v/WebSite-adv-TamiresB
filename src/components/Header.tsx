@@ -76,6 +76,12 @@ export const Header = () => {
 							Artigos
 						</a>
 						<a
+							href="/realizacoes"
+							className="px-4 py-2 text-sm font-medium text-foreground hover:bg-yellow-800/90 hover:text-soft rounded-lg transition-all duration-200"
+						>
+							Realizações
+						</a>
+						<a
 							href="/contato"
 							className="ml-4 px-6 py-2.5 text-sm font-semibold text-azul bg-soft hover:bg-amber-700/90 hover:text-white rounded-lg shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105"
 						>
@@ -147,6 +153,13 @@ export const Header = () => {
 						onClick={() => setOpen(false)}
 					>
 						Artigos
+					</a>
+					<a
+						href="/realizacoes"
+						className="block px-4 py-3 text-sm font-medium text-main bg-yellow-800/20 hover:bg-yellow-950/60 rounded-lg transition-colors duration-200"
+						onClick={() => setOpen(false)}
+					>
+						Realizações
 					</a>
 					<a
 						href="/contato"

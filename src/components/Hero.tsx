@@ -19,7 +19,7 @@ export const Hero = () => {
 							{/* Decoração de fundo */}
 							<div className="absolute -inset-4 bg-amber-600 rounded-3xl blur-2xl opacity-20 group-hover:opacity-30 transition-opacity duration-500"></div>
 							<div className="flex w-full justify-center">
-								<div className="inline-flex md:hidden  gap-2 mb-6 px-4 py-2 rounded-full bg-amber-700/80 border border-blue-600/20">
+								<div className="inline-flex md:hidden gap-2 mb-6 px-4 py-2 rounded-full bg-amber-700/80 border border-blue-600/20">
 									<Sparkles className="w-4 h-4 text-white" />
 									<span className="text-sm font-semibold text-white">
 										Advocacia Trabalhista & Terceiro Setor
@@ -28,7 +28,7 @@ export const Hero = () => {
 							</div>
 
 							{/* Container da foto */}
-							<div className=" relative rounded-3xl shadow-2xl">
+							<div className="relative rounded-3xl shadow-2xl">
 								<div className="relative w-full h-112.5 sm:h-137.5 lg:h-155 rounded-[22px] overflow-hidden">
 									<Image
 										src="/images/tamires.jpg"
@@ -95,54 +95,53 @@ export const Hero = () => {
 
 						{/* Título principal */}
 						<h1 className="text-4xl sm:text-4xl lg:text-5xl font-bold leading-tight mb-6 text-azul/80">
-							Soluções jurídicas claras,
+							Excelência e eficiência na
 							<span className="ml-2 mt-2 bg-linear-to-bl from-yellow-700/25 to-yellow-800 bg-clip-text text-transparent">
-								estratégicas
+								advocacia trabalhista
 							</span>
-							<p className="bg-linear-to-br from-yellow-700 to-azul/60 bg-clip-text text-transparent">e humanizadas</p>
+							<p className="bg-linear-to-br from-yellow-700 to-azul/60 bg-clip-text text-transparent">e do terceiro setor</p>
 						</h1>
 
 						{/* Descrição */}
 						<p className="text-lg sm:text-xl text-main mb-6 leading-relaxed">
-							Atuação em todo Brasil, especializada em <strong className="text-main">Direito do Trabalho</strong> e
-							organizações do <strong className="text-main">Terceiro Setor</strong>,
-							com foco em segurança jurídica, ética e resultados sustentáveis.
+							O meu objetivo como profissional é <strong className="text-main">unir a proteção trabalhista
+								e a segurança jurídica</strong> para fortalecer relações de trabalho e iniciativas de
+							impacto social, com ética, responsabilidade e justiça.
 						</p>
 
-						<p className="text-base text-main/90 mb-8 leading-relaxed">
-							Compromisso de unir a proteção trabalhista e a segurança jurídica para fortalecer
-							relações de trabalho e iniciativas de impacto social.
-						</p>
 						<p className="text-base text-main mb-8">
-							Tudo isso de uma forma que você se sinta protegido juridicamente e acolhido
+							Tudo isso de uma forma que você se sinta <strong>protegido juridicamente e acolhido.</strong>
 						</p>
 
 						{/* Diferenciais em cards */}
-
-						<div className="grid sm:grid-cols-3 gap-4 mb-8">
-							<div className="flex flex-col items-center bg-yellow-800/15 rounded-xl p-4 shadow-sm border border-gray-200 hover:shadow-md transition-shadow duration-300">
-								<Scale className="w-8 h-8 text-blue-600 mb-2" />
-								<p className="text-sm font-semibold text-gray-900">Experiência</p>
-								<p className="text-xs text-gray-600 mt-1">4+ anos atuando</p>
+						<div className="grid sm:grid-cols-2 gap-4 mb-8">
+							<div className="flex flex-col bg-yellow-800/15 rounded-xl p-5 shadow-sm border border-gray-200 hover:shadow-md transition-shadow duration-300">
+								<div className="flex items-center gap-3 mb-2">
+									<Scale className="w-6 h-6 text-blue-600" />
+									<p className="text-base font-bold text-gray-900">Processos Trabalhistas</p>
+								</div>
+								<p className="text-sm text-gray-700">
+									Proteção de direitos, construindo provas, argumentando no processo, negociando
+									acordos e acompanhando o caso do início ao fim, com o máximo de excelência.
+								</p>
 							</div>
-							<div className="flex flex-col items-center bg-yellow-800/25 backdrop-blur-md rounded-xl p-4 shadow-sm border border-gray-100 hover:shadow-md transition-shadow duration-300">
-								<TrendingUp className="w-8 h-8 text-purple-600 mb-2" />
-								<p className="text-sm font-semibold text-gray-900">Resultados</p>
-								<p className="text-xs text-gray-700 mt-1">98% de satisfação</p>
+							<div className="flex flex-col bg-yellow-800/25 backdrop-blur-md rounded-xl p-5 shadow-sm border border-gray-100 hover:shadow-md transition-shadow duration-300">
+								<div className="flex items-center gap-3 mb-2">
+									<Users className="w-6 h-6 text-purple-600" />
+									<p className="text-base font-bold text-gray-900">Terceiro Setor</p>
+								</div>
+								<p className="text-sm text-gray-700">
+									Assegura que a organização atue legalmente, com segurança e
+									sustentabilidade jurídica.
+								</p>
 							</div>
-							<div className="flex flex-col items-center bg-yellow-800/35 backdrop-blur-md rounded-xl p-4 shadow-sm border border-gray-100 hover:shadow-md transition-shadow duration-300">
-								<Users className="w-8 h-8 text-blue-600 mb-2" />
-								<p className="text-sm font-semibold text-gray-900">Confiança</p>
-								<p className="text-xs text-gray-800 mt-1">500+ clientes</p>
-							</div>
-
 						</div>
 
 						{/* CTAs */}
 						<div className="flex flex-col sm:flex-row gap-4">
 							<a
 								href="/contato"
-								className="group inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl  text-white font-semibold bg-yellow-800/80 hover:bg-accent hover:text-main *:transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
+								className="group inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl text-white font-semibold bg-yellow-800/80 hover:bg-accent hover:text-main transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
 							>
 								Agende uma Reunião
 								<ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
@@ -157,7 +156,7 @@ export const Hero = () => {
 						</div>
 
 						{/* Social proof */}
-						<div className="mb-18 sm:mb-5 mt-10 pt-8 border-t border-gray-200 ">
+						<div className="mb-18 sm:mb-5 mt-10 pt-8 border-t border-gray-200">
 							<div className="flex items-center gap-6 text-sm text-gray-600">
 								<div className="flex items-center gap-2">
 									<div className="flex -space-x-2">

@@ -1,0 +1,40 @@
+{
+	"instituicoes": [
+		{
+			"id": 1,
+			"nome": "Associação Obinrin Badu",
+			"cnpj": "48.995.523/0001-41",
+			"tipo": "Abertura",
+			"data": "13.10.2022",
+			"dataISO": "2022-10-13",
+			"gradient": "from-purple-500 to-pink-500"
+		},
+		{
+			"id": 2,
+			"nome": "Instituto IAE/DF",
+			"cnpj": "53.155.268/0001-69",
+			"tipo": "Abertura",
+			"data": "16.11.2023",
+			"dataISO": "2023-11-16",
+			"gradient": "from-blue-500 to-purple-500"
+		},
+		{
+			"id": 3,
+			"nome": "Associação Nacional das Trancistas Negras (ASHANTI)",
+			"cnpj": "58.094.861/0001-66",
+			"tipo": "Abertura",
+			"data": "16.04.2024",
+			"dataISO": "2024-04-16",
+			"gradient": "from-amber-500 to-orange-500"
+		},
+		{
+			"id": 4,
+			"nome": "Instituto É Possível",
+			"cnpj": "02.524.572/0001-03",
+			"tipo": "Regularização",
+			"data": "11.01.2024",
+			"dataISO": "2024-01-11",
+			"gradient": "from-green-500 to-emerald-500"
+		}
+	]
+}

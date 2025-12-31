@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Briefcase, Shield, Users, TrendingUp, Award, CheckCircle } from "lucide-react";
+import { Briefcase, Shield, Users, TrendingUp, Award, FileText, Scale, Handshake, FileCheck } from "lucide-react";
 
 function TrabalhistaPage() {
 	return (
@@ -16,13 +16,13 @@ function TrabalhistaPage() {
 						</div>
 						<div className="flex-1">
 							<h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-azul/90 mb-3 sm:mb-4">
-								Direito do Trabalho
+								Direito Trabalhista
 							</h2>
 							<p className="text-zinc-600 text-base sm:text-lg leading-relaxed">
-								Atuação jurídica voltada à <strong className="text-amber-900">proteção de direitos</strong>,
-								prevenção de conflitos e construção de relações de trabalho seguras, éticas e equilibradas.
-								Cada caso é analisado de forma individual, com linguagem clara e
-								estratégias alinhadas à realidade de cada cliente.
+								Orientação completa sobre <strong className="text-amber-900">direitos e deveres trabalhistas</strong>,
+								tanto para empregadores quanto para empregados. Atuação baseada na CLT,
+								Constituição Federal, legislações específicas e normas coletivas, com foco
+								em soluções jurídicas claras, estratégicas e alinhadas à realidade de cada cliente.
 							</p>
 						</div>
 					</div>
@@ -52,34 +52,72 @@ function TrabalhistaPage() {
 				<div className="flex items-center gap-3 mb-6 sm:mb-8">
 					<div className="w-1 h-8 sm:h-10 bg-linear-to-b from-amber-800 to-yellow-600 rounded-full"></div>
 					<h3 className="text-xl sm:text-2xl lg:text-3xl font-semibold text-azul/80">
-						Atuação na área trabalhista
+						Serviços na área trabalhista
 					</h3>
 				</div>
 
 				<div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-5 lg:gap-6">
 					{[
-						{ text: "Rescisão contratual e verbas trabalhistas", gradient: "from-amber-100 to-yellow-50" },
-						{ text: "Assédio moral e sexual no ambiente de trabalho", gradient: "from-yellow-100 to-amber-50" },
-						{ text: "Horas extras, adicionais e equiparação salarial", gradient: "from-amber-50 to-yellow-100" },
-						{ text: "Reconhecimento de vínculo empregatício", gradient: "from-yellow-50 to-amber-100" },
-						{ text: "Orientação preventiva para empresas e empregadores", gradient: "from-amber-100 to-yellow-100" },
-						{ text: "Acompanhamento em audiências e processos trabalhistas", gradient: "from-yellow-100 to-amber-100" }
-					].map((item, index) => (
-						<div
-							key={index}
-							className={`group relative bg-linear-to-br ${item.gradient} rounded-xl sm:rounded-2xl p-5 sm:p-6 border border-amber-200/50 hover:border-amber-400/50 hover:shadow-xl transition-all duration-300 hover:scale-102 overflow-hidden`}
-						>
-							{/* Decoração de fundo */}
-							<div className="absolute top-0 right-0 w-24 h-24 bg-amber-800/5 rounded-full -mr-12 -mt-12 group-hover:scale-150 transition-transform duration-500"></div>
+						{
+							icon: Scale,
+							title: "Orientação jurídica sobre direitos trabalhistas",
+							text: "Orientação completa sobre direitos e deveres previstos pela CLT, Constituição Federal, legislações específicas e normas coletivas como acordos ou convenções de sindicatos.",
+							gradient: "from-amber-100 to-yellow-50"
+						},
+						{
+							icon: FileText,
+							title: "Elaboração e revisão de contratos e documentos",
+							text: "Elaboração, revisão e negociação de contratos de trabalho, termos de rescisão (TRCT), notificações de demissão, aviso prévio e demais documentos relacionados ao vínculo empregatício.",
+							gradient: "from-yellow-100 to-amber-50"
+						},
+						{
+							icon: Users,
+							title: "Representação em audiências",
+							text: "Representação completa do cliente durante as audiências trabalhistas, onde são debatidas as questões levantadas pelas partes.",
+							gradient: "from-amber-50 to-yellow-100"
+						},
+						{
+							icon: Handshake,
+							title: "Negociação e acordos",
+							text: "Atuação como intermediário entre empregador e empregado para negociar acordos mais rápidos e benéficos para ambas as partes, evitando longas disputas judiciais.",
+							gradient: "from-yellow-50 to-amber-100"
+						},
+						{
+							icon: FileCheck,
+							title: "Acompanhamento do processo",
+							text: "Acompanhamento completo do andamento processual, observando prazos legais e tomando medidas como interposição de recursos, contestações e execução de sentença.",
+							gradient: "from-amber-100 to-yellow-100"
+						},
+						{
+							icon: TrendingUp,
+							title: "Consultoria preventiva",
+							text: "Consultoria preventiva para empresas, ajudando a evitar problemas trabalhistas e orientando sobre rescisão contratual e cumprimento de obrigações legais.",
+							gradient: "from-yellow-100 to-amber-100"
+						}
+					].map((item, index) => {
+						const Icon = item.icon;
+						return (
+							<div
+								key={index}
+								className={`group relative bg-linear-to-br ${item.gradient} rounded-xl sm:rounded-2xl p-5 sm:p-6 border border-amber-200/50 hover:border-amber-400/50 hover:shadow-xl transition-all duration-300 hover:scale-102 overflow-hidden`}
+							>
+								{/* Decoração de fundo */}
+								<div className="absolute top-0 right-0 w-24 h-24 bg-amber-800/5 rounded-full -mr-12 -mt-12 group-hover:scale-150 transition-transform duration-500"></div>
 
-							<div className="relative flex items-start gap-3">
-								<CheckCircle className="w-5 h-5 sm:w-6 sm:h-6 text-amber-800 shrink-0 mt-0.5 group-hover:scale-110 transition-transform duration-300" />
-								<p className="text-zinc-700 text-sm sm:text-base leading-relaxed font-medium">
-									{item.text}
-								</p>
+								<div className="relative">
+									<div className="flex items-center gap-3 mb-3">
+										<div className="w-10 h-10 bg-amber-800/10 rounded-lg flex items-center justify-center shrink-0">
+											<Icon className="w-5 h-5 text-amber-800" />
+										</div>
+										<h4 className="text-base sm:text-lg font-bold text-azul/90">{item.title}</h4>
+									</div>
+									<p className="text-zinc-700 text-sm sm:text-base leading-relaxed">
+										{item.text}
+									</p>
+								</div>
 							</div>
-						</div>
-					))}
+						);
+					})}
 				</div>
 			</section>
 
@@ -90,18 +128,18 @@ function TrabalhistaPage() {
 				<div className="relative bg-linear-to-br from-amber-800/10 via-yellow-800/10 to-amber-700/10 backdrop-blur-sm rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-10 border border-amber-300/30 shadow-xl">
 					<div className="flex items-center gap-3 mb-4 sm:mb-6">
 						<div className="w-18 h-12 bg-linear-to-br from-amber-800 to-yellow-700 rounded-xl flex items-center justify-center shadow-lg">
-							<TrendingUp className="w-6 h-6 text-white" />
+							<Shield className="w-6 h-6 text-white" />
 						</div>
 						<h3 className="text-xl sm:text-2xl lg:text-3xl font-bold bg-linear-to-r from-amber-900 via-yellow-800 to-amber-800 bg-clip-text text-transparent">
-							Atendimento humanizado e estratégico
+							Atendimento personalizado e estratégico
 						</h3>
 					</div>
 
 					<p className="text-zinc-700 text-sm sm:text-base lg:text-lg leading-relaxed max-w-3xl mb-6">
-						A advocacia trabalhista exige <strong className="text-amber-900">sensibilidade, responsabilidade e
-							conhecimento técnico</strong>. O atendimento é pautado pela escuta ativa,
+						A advocacia trabalhista exige <strong className="text-amber-900">conhecimento técnico,
+							responsabilidade e sensibilidade</strong>. O atendimento é pautado pela escuta ativa,
 						transparência nas orientações e comprometimento com soluções jurídicas
-						seguras e eficazes.
+						seguras e eficazes para empregadores e empregados.
 					</p>
 
 					{/* Lista de benefícios */}
@@ -109,8 +147,10 @@ function TrabalhistaPage() {
 						{[
 							"Análise personalizada do seu caso",
 							"Linguagem clara e acessível",
-							"Acompanhamento em todas as etapas",
-							"Estratégias alinhadas aos seus objetivos"
+							"Acompanhamento em todas as etapas processuais",
+							"Estratégias alinhadas aos seus objetivos",
+							"Consultoria preventiva para empresas",
+							"Negociação eficiente de acordos"
 						].map((benefit, index) => (
 							<div key={index} className="flex items-center gap-2">
 								<div className="w-1.5 h-1.5 bg-amber-800 rounded-full"></div>
@@ -125,7 +165,7 @@ function TrabalhistaPage() {
 			<section className="relative">
 				<div className="absolute inset-0 bg-linear-to-br from-amber-800/20 to-yellow-700/20 rounded-3xl blur-2xl"></div>
 
-				<div className="relative bg-linear-to-br from-amber-900/90 to-yellow-800/90 backdrop-blur-sm rounded-2xl sm:rounded-3xl p-8 text-center shadow-2xl shadow-black/60 overflow-hidden">
+				<div className="relative bg-linear-to-br from-amber-900/90 to-yellow-800/90 backdrop-blur-sm rounded-2xl sm:rounded-3xl p-8 sm:p-10 lg:p-12 text-center shadow-2xl border border-amber-700/50 overflow-hidden">
 					{/* Decoração de fundo */}
 					<div className="absolute top-0 left-0 w-full h-full opacity-10">
 						<div className="absolute top-10 left-10 w-32 h-32 bg-white rounded-full blur-3xl"></div>
@@ -141,8 +181,9 @@ function TrabalhistaPage() {
 							Precisa de orientação trabalhista?
 						</h3>
 						<p className="text-amber-100 text-sm sm:text-base lg:text-lg mb-8 max-w-2xl mx-auto">
-							Entre em contato para uma análise responsável e personalizada do seu
-							caso. Proteja seus direitos com quem entende de verdade.
+							Entre em contato para uma análise personalizada do seu caso.
+							Seja você empregador ou empregado, conte com orientação jurídica
+							responsável e estratégica para proteger seus direitos.
 						</p>
 
 						<Link

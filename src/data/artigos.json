@@ -1,0 +1,26 @@
+{
+	"artigos": [
+		{
+			"id": 1,
+			"title": "O empreendedorismo como válvula de escape para as mulheres negras",
+			"publication": "Correio Braziliense",
+			"date": "Novembro de 2023",
+			"dateISO": "2023-11",
+			"url": "https://www.correiobraziliense.com.br/opiniao/2023/11/6656952-o-empreendedorismo-como-valvula-de-escape-para-as-mulheres-negras.html",
+			"excerpt": "Análise sobre como o empreendedorismo tem se tornado uma alternativa fundamental para mulheres negras diante das barreiras estruturais do mercado de trabalho formal.",
+			"category": "Opinião",
+			"gradient": "from-purple-500 to-pink-500"
+		},
+		{
+			"id": 2,
+			"title": "A representatividade de mulheres negras na área de tecnologia e inovação",
+			"publication": "Correio Braziliense",
+			"date": "Fevereiro de 2025",
+			"dateISO": "2025-02",
+			"url": "https://www.correiobraziliense.com.br/opiniao/2025/02/7061342-a-representatividade-de-mulheres-negras-na-area-de-tecnologia-e-inovacao.html",
+			"excerpt": "Reflexão sobre a importância da presença e representatividade de mulheres negras no setor de tecnologia e inovação no Brasil.",
+			"category": "Opinião",
+			"gradient": "from-blue-500 to-purple-500"
+		}
+	]
+}

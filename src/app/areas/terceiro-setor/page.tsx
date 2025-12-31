@@ -1,6 +1,6 @@
 'use client'
 import Link from "next/link";
-import { Heart, Sparkles, Award, Users, CheckCircle, Target } from "lucide-react";
+import { Heart, FileText, Scale, Users, CheckCircle, Target, Award, Shield, TrendingUp } from "lucide-react";
 
 function TerceiroSetorPage() {
 	return (
@@ -20,10 +20,10 @@ function TerceiroSetorPage() {
 								Terceiro Setor
 							</h2>
 							<p className="text-zinc-600 text-base sm:text-lg leading-relaxed">
-								Assessoria jurídica especializada para <strong className="text-amber-800">organizações da sociedade civil</strong>,
-								ONGs, associações e fundações. Atuação voltada à conformidade legal,
-								governança transparente e fortalecimento institucional para que sua
-								organização possa focar no impacto social.
+								Assessoria jurídica completa para <strong className="text-amber-800">organizações da sociedade civil</strong>,
+								ONGs, associações e fundações. Atuação voltada à regularização,
+								conformidade legal, captação de recursos e fortalecimento institucional
+								para que sua organização alcance seus objetivos sociais.
 							</p>
 						</div>
 					</div>
@@ -53,34 +53,84 @@ function TerceiroSetorPage() {
 				<div className="flex items-center gap-3 mb-6 sm:mb-8">
 					<div className="w-1 h-8 sm:h-10 bg-linear-to-b from-amber-600 to-azul rounded-full"></div>
 					<h3 className="text-xl sm:text-2xl lg:text-3xl font-semibold text-azul/80">
-						Atuação no terceiro setor
+						Serviços no terceiro setor
 					</h3>
 				</div>
 
 				<div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-5 lg:gap-6">
 					{[
-						{ text: "Constituição de ONGs, associações e fundações", gradient: "from-amber-100 to-purple-50" },
-						{ text: "Elaboração e revisão de estatutos sociais", gradient: "from-amber-100 to-blue-50" },
-						{ text: "Obtenção e manutenção de títulos e certificações", gradient: "from-amber-50 to-purple-50" },
-						{ text: "Assessoria em convênios e parcerias público-privadas", gradient: "from-amber-50 to-red-100" },
-						{ text: "Governança corporativa e compliance institucional", gradient: "from-amber-100 to-emerald-50" },
-						{ text: "Orientação sobre prestação de contas e transparência", gradient: "from-amber-100 to-green-100" }
-					].map((item, index) => (
-						<div
-							key={index}
-							className={`group relative bg-linear-to-br ${item.gradient} rounded-xl sm:rounded-2xl p-5 sm:p-6 border border-blue-200/50 hover:border-blue-400/50 hover:shadow-xl transition-all duration-300 hover:scale-102 overflow-hidden`}
-						>
-							{/* Decoração de fundo */}
-							<div className="absolute top-0 right-0 w-24 h-24 bg-blue-600/5 rounded-full -mr-12 -mt-12 group-hover:scale-150 transition-transform duration-500"></div>
+						{
+							icon: FileText,
+							title: "Constituição e regularização jurídica",
+							text: "Elaboração de estatuto social, atas, registro em cartório e adequação legal completa da entidade.",
+							gradient: "from-amber-100 to-purple-50"
+						},
+						{
+							icon: Scale,
+							title: "Assessoria jurídica contínua",
+							text: "Orientação sobre leis aplicáveis ao terceiro setor, incluindo Marco Regulatório das OSCs, Código Civil e LGPD.",
+							gradient: "from-amber-100 to-blue-50"
+						},
+						{
+							icon: FileText,
+							title: "Elaboração e análise de contratos e convênios",
+							text: "Assessoria em parcerias com poder público, empresas privadas e financiadores.",
+							gradient: "from-amber-50 to-purple-50"
+						},
+						{
+							icon: CheckCircle,
+							title: "Acompanhamento de editais e chamamentos públicos",
+							text: "Análise jurídica de requisitos, documentos necessários e prestações de contas.",
+							gradient: "from-amber-50 to-red-100"
+						},
+						{
+							icon: Shield,
+							title: "Prestação de contas e compliance",
+							text: "Apoio jurídico para transparência, correta aplicação de recursos e prevenção de irregularidades.",
+							gradient: "from-amber-100 to-emerald-50"
+						},
+						{
+							icon: Users,
+							title: "Direito trabalhista e voluntariado",
+							text: "Orientação sobre contratação de empregados, estagiários, prestadores de serviço e termos de voluntariado.",
+							gradient: "from-amber-100 to-green-100"
+						},
+						{
+							icon: TrendingUp,
+							title: "Captação de recursos",
+							text: "Busca de certificações (OSCIP, CEBAS, CEAC) e elaboração de projetos para editais e Lei Rouanet.",
+							gradient: "from-purple-100 to-amber-50"
+						},
+						{
+							icon: Award,
+							title: "Promoção de direitos humanos e incidência política",
+							text: "Apoio jurídico a causas sociais, controle social e fortalecimento da cidadania.",
+							gradient: "from-blue-100 to-amber-50"
+						}
+					].map((item, index) => {
+						const Icon = item.icon;
+						return (
+							<div
+								key={index}
+								className={`group relative bg-linear-to-br ${item.gradient} rounded-xl sm:rounded-2xl p-5 sm:p-6 border border-blue-200/50 hover:border-blue-400/50 hover:shadow-xl transition-all duration-300 hover:scale-102 overflow-hidden`}
+							>
+								{/* Decoração de fundo */}
+								<div className="absolute top-0 right-0 w-24 h-24 bg-blue-600/5 rounded-full -mr-12 -mt-12 group-hover:scale-150 transition-transform duration-500"></div>
 
-							<div className="relative flex items-start gap-3">
-								<CheckCircle className="w-5 h-5 sm:w-6 sm:h-6 text-amber-700 shrink-0 mt-0.5 group-hover:scale-110 transition-transform duration-300" />
-								<p className="text-zinc-700 text-sm sm:text-base leading-relaxed font-medium">
-									{item.text}
-								</p>
+								<div className="relative">
+									<div className="flex items-center gap-3 mb-3">
+										<div className="w-10 h-10 bg-amber-600/10 rounded-lg flex items-center justify-center shrink-0">
+											<Icon className="w-5 h-5 text-amber-700" />
+										</div>
+										<h4 className="text-base sm:text-lg font-bold text-azul/90">{item.title}</h4>
+									</div>
+									<p className="text-zinc-700 text-sm sm:text-base leading-relaxed">
+										{item.text}
+									</p>
+								</div>
 							</div>
-						</div>
-					))}
+						);
+					})}
 				</div>
 			</section>
 
@@ -91,7 +141,7 @@ function TerceiroSetorPage() {
 				<div className="relative bg-linear-to-br from-amber-600/40 via-yellow-600/10 to-purple-700/10 backdrop-blur-sm rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-10 border border-amber-900 shadow-2xl">
 					<div className="flex items-center gap-3 mb-4 sm:mb-6">
 						<div className="w-12 h-12 bg-linear-to-br from-amber-600 to-yellow-700 rounded-xl flex items-center justify-center shadow-lg">
-							<Sparkles className="w-6 h-6 text-white" />
+							<Heart className="w-6 h-6 text-white" />
 						</div>
 						<h3 className="text-xl sm:text-2xl lg:text-3xl font-bold bg-linear-to-r from-amber-700 via-azul to-yellow-600 bg-clip-text text-transparent">
 							Compromisso com o propósito social
@@ -110,8 +160,10 @@ function TerceiroSetorPage() {
 						{[
 							"Soluções jurídicas sob medida",
 							"Conhecimento do marco regulatório",
-							"Suporte em todas as etapas",
-							"Foco em governança e transparência"
+							"Suporte em captação de recursos",
+							"Foco em compliance e transparência",
+							"Assessoria em editais e convênios",
+							"Apoio em causas de direitos humanos"
 						].map((benefit, index) => (
 							<div key={index} className="flex items-center gap-2">
 								<div className="w-1.5 h-1.5 bg-blue-600 rounded-full"></div>
@@ -142,14 +194,32 @@ function TerceiroSetorPage() {
 						{
 							icon: "🤝",
 							title: "Atendimento Humanizado",
-							desc: "Escuta ativa e compreensão das necessidades específicas",
+							desc: "Escuta ativa e compreensão das necessidades específicas de cada organização",
 							gradient: "from-amber-100 to-blue-50"
 						},
 						{
 							icon: "⚖️",
 							title: "Expertise Especializada",
-							desc: "Conhecimento técnico focado no terceiro setor",
+							desc: "Conhecimento técnico focado no terceiro setor e legislação aplicável",
 							gradient: "from-amber-50 to-purple-50"
+						},
+						{
+							icon: "💡",
+							title: "Visão Estratégica",
+							desc: "Apoio na captação de recursos e busca de certificações",
+							gradient: "from-blue-100 to-amber-50"
+						},
+						{
+							icon: "🛡️",
+							title: "Compliance Robusto",
+							desc: "Garantia de transparência e prevenção de irregularidades",
+							gradient: "from-purple-100 to-amber-50"
+						},
+						{
+							icon: "🎯",
+							title: "Foco em Impacto",
+							desc: "Soluções que fortalecem sua atuação social e cidadania",
+							gradient: "from-green-100 to-amber-50"
 						}
 					].map((item, index) => (
 						<div
@@ -196,7 +266,8 @@ function TerceiroSetorPage() {
 						</h3>
 						<p className="text-blue-100 text-sm sm:text-base lg:text-lg mb-8 max-w-2xl mx-auto">
 							Agende uma conversa e descubra como podemos fortalecer a estrutura
-							legal da sua instituição para maximizar o impacto social.
+							legal da sua instituição, auxiliar na captação de recursos e maximizar
+							o impacto social das suas ações.
 						</p>
 
 						<Link
